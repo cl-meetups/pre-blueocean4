@@ -17,5 +17,10 @@ pipeline {
 ./mvnw -Dmaven.test.failure.ignore=true clean package'''
       }
     }
+    stage('Arquivar') {
+      steps {
+        junit 'target/surefire-reports/*.xml'
+      }
+    }
   }
 }
