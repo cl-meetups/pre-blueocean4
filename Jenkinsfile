@@ -13,7 +13,8 @@ pipeline {
     }
     stage('Compilar') {
       steps {
-        sh './mvnw clean package'
+        sh '''chown +x mvwn
+./mvnw clean package'''
       }
     }
   }
