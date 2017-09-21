@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Compilar') {
       steps {
-        sh '''chmod +x mvwn
+        sh '''chmod +x mvnw
 ./mvnw clean package'''
       }
     }
