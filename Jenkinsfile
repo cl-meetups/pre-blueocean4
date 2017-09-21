@@ -14,7 +14,7 @@ pipeline {
     stage('Compilar') {
       steps {
         sh '''chmod +x mvnw
-./mvnw clean package'''
+./mvnw -Dmaven.test.failure.ignore=true clean package'''
       }
     }
   }
